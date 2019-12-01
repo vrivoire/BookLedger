@@ -12,6 +12,10 @@
             .ui-datepicker-calendar {
                 display: none;
             }​
+            form label {
+                display: inline-block;
+                width: 250px;
+            }
         </style>
 
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -29,15 +33,15 @@
             <br/>
 
             <form id="add_form" method="post" action="/addBook" hidden="">
-                <label for="author">Author:</label>
+                <label class="ui-widget" for="author">Author:</label>
                 <input type="text" id="author" name="author"/>
                 <br/>
 
-                <label for="title">Title:</label>
+                <label class="ui-widget" for="title">Title:</label>
                 <input type="text" id="title" name="title"/>
                 <br/>
 
-                <label for="genre">Genre:</label>
+                <label class="ui-widget" for="genre">Genre:</label>
                 <select name="genre" id="genre">
                     <optgroup label="Genre">
                         <option value="SCIFI">Sci-Fi</option>
@@ -46,15 +50,15 @@
                 </select>
                 <br/>
 
-                <label for="pages">Pages:</label>
+                <label class="ui-widget" for="pages">Pages:</label>
                 <input id="pages" name="pages"/>
                 <br/>
 
-                <label for="publication">Publication date:</label>
+                <label class="ui-widget" for="publication">Publication date:</label>
                 <input id="publication" name="publication"/>
                 <br/>
 
-                <label for="rating">Rating:</label>
+                <label class="ui-widget" for="rating">Rating:</label>
                 <select name="rating" id="rating">
                     <optgroup label="Rating">
                         <option value="1">★</option>
@@ -66,7 +70,7 @@
                 </select>
                 <br/>
 
-                <label for="isRead">Read:</label>
+                <label class="ui-widget" for="isRead">Read:</label>
                 <input type="checkbox" id="isRead" name="isRead"/>
                 <br/>
 

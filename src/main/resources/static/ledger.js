@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     $('#add-button').click(function () {
         $('#add_form').toggle('blind', {}, 500);
