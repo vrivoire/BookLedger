@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>Book Ledger</title>
+
+        <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="basictable-master/basictable.css"/>
+        <link rel="stylesheet" href="basictable-master/demo/css/style.css"/>
+        <link rel="stylesheet" href="https://jqueryvalidation.org/files/demo/site-demos.css">
+        <style id="compiled-css" type="text/css">
+            .ui-datepicker-calendar {
+                display: none;
+            }​
+        </style>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="basictable-master/jquery.basictable.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+        <script type="text/javascript" src="ledger.js"></script>
+    </head>
+    <body>
+        <div id="page">
+            <h1>Book list</h1>
+            <button class="ui-button ui-widget ui-corner-all" id='add-button'>Add a new book</button>
+            <div id="feedback"></div>
+            <br/>
+
+            <form id="add_form" method="post" action="/addBook" hidden="">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author"/>
+                <br/>
+
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title"/>
+                <br/>
+
+                <label for="genre">Genre:</label>
+                <select name="genre" id="genre">
+                    <optgroup label="Genre">
+                        <option value="SCIFI">Sci-Fi</option>
+                        <option value="ROMANCE">Romance</option>
+                    </optgroup>
+                </select>
+                <br/>
+
+                <label for="pages">Pages:</label>
+                <input id="pages" name="pages"/>
+                <br/>
+
+                <label for="publication">Publication date:</label>
+                <input id="publication" name="publication"/>
+                <br/>
+
+                <label for="rating">Rating:</label>
+                <select name="rating" id="rating">
+                    <optgroup label="Rating">
+                        <option value="1">★</option>
+                        <option value="2">★★</option>
+                        <option value="3">★★★</option>
+                        <option value="4">★★★★</option>
+                        <option value="5">★★★★★</option>
+                    </optgroup>
+                </select>
+                <br/>
+
+                <label for="isRead">Read:</label>
+                <input type="checkbox" id="isRead" name="isRead"/>
+                <br/>
+
+                <button class="ui-button ui-widget ui-corner-all" id='submit' type="submit" value="Submit">Submit</button>
+            </form>
+
+            <table id="table">
+                <tr>
+                    <th>Author</th>
+                    <th>Title</th>
+                    <th>Genre</th>
+                    <th>Pages</th>
+                    <th>Publication Year</th>
+                    <th>Rating</th>
+                    <th>Read</th>
+                </tr>
+            </table>
+        </div>
+    </body>
+
+</html>
