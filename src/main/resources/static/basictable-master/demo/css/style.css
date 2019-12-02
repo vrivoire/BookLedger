@@ -16,7 +16,6 @@
     display: none;
 }
 
-
 .my-textfield {
     font: inherit;
     color: inherit;
@@ -26,7 +25,7 @@
 }
 form label {
     display: inline-block;
-    width: 100px;
+    width: 150px;
 }
 
 form div {
